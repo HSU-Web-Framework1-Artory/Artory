@@ -7,7 +7,7 @@ import IMG from '../../../assets/profileImg.svg'
 //컴포넌트
 import StandardButton from '../../../shared/components/StandardButton'
 
-export default function ProfileSection({ currentYear }) {
+export default function ProfileSection({ currentYear,setIsShowModal }) {
     return (
         <MainLayout>
 
@@ -17,7 +17,12 @@ export default function ProfileSection({ currentYear }) {
             </ProfileContainer>
 
             <div>
-                <StandardButton text="스토리 작성하기" width="10.55669rem" height="2.1875rem" marginRight="13.38rem" />
+                <StandardButton 
+                    onClick={()=>setIsShowModal(true)}
+                    text="스토리 작성하기" 
+                    width="10.55669rem" 
+                    height="2.1875rem" 
+                    marginRight="13.38rem" />
                 {/* <span>{currentYear}</span> */}
             </div>
 
